@@ -13,5 +13,5 @@
 ## Installation
 
 ```bash
-npm i strapi-email-nodemailer
+npm i strapi-email-nodemailer-gmail
 ```
