@@ -1,7 +1,7 @@
 {
-  "name": "strapi-email-nodemailer",
-  "version": "0.2.1",
-  "description": "Nodemailer provider for strapi email",
+  "name": "strapi-email-nodemailer-gmail",
+  "version": "0.0.1",
+  "description": "Nodemailer Gmail provider for strapi email",
   "homepage": "http://strapi.io",
   "keywords": [
     "email",
@@ -19,20 +19,20 @@
     "isProvider": true
   },
   "author": {
-    "email": "audiomancer@bluewin.ch",
-    "name": "audiomancer",
-    "url": "https://github.com/audiomancer"
+    "email": "igor@kaldowski.co.uk",
+    "name": "igorkaldowski",
+    "url": "https://github.com/igorkaldowski"
   },
   "maintainers": [
     {
-      "name": "audiomancer",
-      "email": "audiomancer@bluewin.ch",
-      "url": "https://github.com/audiomancer"
+      "name": "igorkaldowski",
+      "email": "igor@kaldowski.co.uk",
+      "url": "https://github.com/igorkaldowski"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/audiomancer/strapi-email-nodemailer.git"
+    "url": "git://github.com/igorkaldowski/strapi-email-nodemailer-gmail.git"
   },
   "bugs": {
     "url": "https://github.com/strapi/strapi/issues"
