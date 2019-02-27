@@ -1,4 +1,4 @@
-# strapi-email-nodemailer
+# strapi-email-nodemailer-gmail
 
 ## Resources
 
