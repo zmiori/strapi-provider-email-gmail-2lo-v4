@@ -1,4 +1,13 @@
-# strapi-email-nodemailer-gmail
+# strapi-email-nodemailer-gmail-oauth2
+
+## Usage
+
+1) [Create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts/)
+2) Use your Client (Unique) id and a (new) Private key 
+3) Use an exiting gmail username (within your domain/project)
+4) Use your username as 'From' and 'Reply-To'
+
+- Optional: Use an alias as 'From' or 'Reply-To'
 
 ## Resources
 
@@ -13,5 +22,5 @@
 ## Installation
 
 ```bash
-npm i strapi-email-nodemailer-gmail
+npm i strapi-email-nodemailer-gmail-oauth2
 ```
