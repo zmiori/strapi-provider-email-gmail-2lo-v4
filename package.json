@@ -1,6 +1,6 @@
 {
   "name": "strapi-email-nodemailer-gmail-oauth2",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Nodemailer Gmail provider with OAuth2 for strapi email",
   "homepage": "http://strapi.io",
   "keywords": [
