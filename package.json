@@ -1,7 +1,7 @@
 {
-  "name": "strapi-email-nodemailer-gmail",
+  "name": "strapi-email-nodemailer-gmail-oauth2",
   "version": "0.0.1",
-  "description": "Nodemailer Gmail provider for strapi email",
+  "description": "Nodemailer Gmail provider with OAuth2 for strapi email",
   "homepage": "http://strapi.io",
   "keywords": [
     "email",
@@ -19,20 +19,20 @@
     "isProvider": true
   },
   "author": {
-    "email": "igor@kaldowski.co.uk",
-    "name": "igorkaldowski",
-    "url": "https://github.com/igorkaldowski"
+    "email": "mattias1999@live.nl",
+    "name": "MattieBelt",
+    "url": "https://github.com/MattieBelt"
   },
   "maintainers": [
     {
-      "name": "igorkaldowski",
-      "email": "igor@kaldowski.co.uk",
-      "url": "https://github.com/igorkaldowski"
+      "name": "MattieBelt",
+      "email": "mattias1999@live.nl",
+      "url": "https://github.com/MattieBelt"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/igorkaldowski/strapi-email-nodemailer-gmail.git"
+    "url": "git://github.com/MattieBelt/strapi-email-nodemailer-gmail-oath2.git"
   },
   "bugs": {
     "url": "https://github.com/strapi/strapi/issues"
