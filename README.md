@@ -1,4 +1,4 @@
-# strapi-email-nodemailer-gmail-oauth2
+# strapi-provider-email-gmail-2lo
 
 ## Usage
 
@@ -22,5 +22,5 @@
 ## Installation
 
 ```bash
-npm i strapi-email-nodemailer-gmail-oauth2
+npm i strapi-provider-email-gmail-2lo
 ```
