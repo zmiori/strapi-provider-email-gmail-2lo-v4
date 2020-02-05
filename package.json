@@ -1,10 +1,12 @@
 {
-  "name": "strapi-email-nodemailer-gmail-oauth2",
-  "version": "0.1.1",
-  "description": "Nodemailer Gmail provider with OAuth2 for strapi email",
+  "name": "strapi-provider-email-gmail-2lo",
+  "version": "3.0.0-beta.18.7",
+  "description": "Gmail provider with a service account for the Strapi framework",
   "homepage": "http://strapi.io",
   "keywords": [
     "email",
+    "gmail",
+    "service account",
     "strapi",
     "nodemailer"
   ],
@@ -13,33 +15,29 @@
   },
   "main": "./lib",
   "dependencies": {
-    "nodemailer": "^4.6.7"
+    "nodemailer": "^6.4.2"
   },
   "strapi": {
     "isProvider": true
   },
   "author": {
-    "email": "mattias1999@live.nl",
-    "name": "MattieBelt",
+    "email": "mattiasvandenbelt@gmail.com",
+    "name": "Mattias Belt, van den",
     "url": "https://github.com/MattieBelt"
   },
-  "maintainers": [
-    {
-      "name": "MattieBelt",
-      "email": "mattias1999@live.nl",
-      "url": "https://github.com/MattieBelt"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/MattieBelt/strapi-email-nodemailer-gmail-oath2.git"
+    "url": "git://github.com/MattieBelt/strapi-provider-email-gmail-2lo.git"
   },
   "bugs": {
-    "url": "https://github.com/strapi/strapi/issues"
+    "url": "https://github.com/MattieBelt/strapi-provider-email-gmail-2lo/issues"
   },
   "engines": {
-    "node": ">= 9.0.0",
-    "npm": ">= 5.3.0"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo no test specified"
+  }
 }

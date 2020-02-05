@@ -78,6 +78,7 @@ $RECYCLE.BIN/
 *#
 .idea
 nbproject
+*.iml
 
 
 ############################
@@ -92,4 +93,3 @@ results
 build
 node_modules
 .node_history
-package-lock.json
