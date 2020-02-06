@@ -9,6 +9,17 @@
 
 - Optional: Use an alias as 'From' or 'Reply-To'
 
+
+### G suite
+If using G suite follow these steps to add the right scopes:
+1) Go to G suite admin dashboard > Security > Advanced settings > Manage API client access
+2) Add an authorized client
+    - Client name: client_id
+    - Scopes: https://mail.google.com/ 
+3) Authorize
+
+Also make sure Gmail api access is enabled. Security > API permissions
+
 ## Resources
 
 - [MIT License](LICENSE.md)
