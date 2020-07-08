@@ -1,24 +1,68 @@
 # strapi-provider-email-gmail-2lo
+This package is an email provider for the headless CMS [Strapi](https://github.com/strapi/strapi).
+You can use this provider to send mail programmatically with `strapi-plugin-email`. 
 
-## Usage
+This provider enables you to send email with the [Gmail API](https://developers.google.com/gmail/api) using a 2-legged OAuth configuration, for example when using G Suite.
 
-1) [Create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts/)
-2) Use your Client (Unique) id and a (new) Private key 
-3) Use an exiting gmail username (within your domain/project)
-4) Use your username as 'From' and 'Reply-To'
+## Installation
 
-- Optional: Use an alias as 'From' or 'Reply-To'
+```bash
+# using yarn
+yarn add strapi-provider-email-gmail-2lo
 
+# using npm
+npm install strapi-provider-email-gmail-2lo --save
+```
 
-### G suite
-If using G suite follow these steps to add the right scopes:
-1) Go to G suite admin dashboard > Security > Advanced settings > Manage API client access
+## Setup
+
+1) [Enable the Gmail API](https://console.developers.google.com/apis/library/gmail.googleapis.com)
+2) [Configure the OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent)
+3) [Create a service account](https://console.cloud.google.com/iam-admin/serviceaccounts/)
+4) Create a new Private key for your service account 
+5) Configure the provider in `config/plugins`
+
+| Variable                  | Type                    | Description                                                                                                                         | Required | Default   |
+| ------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------- | --------- |
+| provider                  | string                  | The name of the provider you use                                                                                                    | yes      |           |
+| providerOptions           | object                  | Provider options                                                                                                                    | yes      |           |
+| providerOptions.username  | string                  | An existing email address within your domain/project                                                                                         | yes      |           |
+| providerOptions.clientId  | number                  | Service account API Client id                                                                                                       | yes      |           |
+| providerOptions.privateKey| string                  | Service account private key                                                                                                         | yes      |           |
+| settings                  | object                  | Settings                                                                                                                            | no       | {}        |
+| settings.defaultFrom      | string                  | Default sender mail address, exist in domain                                                                                                        | no       | undefined |
+| settings.defaultReplyTo   | string \| array<string> | Default address or addresses the receiver is asked to reply to                                                                      | no       | undefined |
+
+### Example
+
+**Path -** `config/plugins.js`
+
+```js
+module.exports = ({ env }) => ({
+  // ...
+  email: {
+    provider: 'gmail-2lo',
+    providerOptions: {
+      username: 'myemail@example.com',
+      clientId: env('EMAIL_CLIENT_ID'),
+      privateKey: env('EMAIL_PRIVATE_KEY'),
+    },
+    settings: {
+      defaultFrom: 'myemail@example.com',
+      defaultReplyTo: 'myemail@example.com',
+    },
+  },
+  // ...
+});
+```
+
+### G Suite
+When using G Suite follow these steps authorize the right scopes:
+1) Go to G Suite admin dashboard > Security > Advanced settings > [Manage domain-wide delegation](https://admin.google.com/ac/owl/domainwidedelegation)
 2) Add an authorized client
-    - Client name: client_id
+    - Client name: `client_id`
     - Scopes: https://mail.google.com/ 
 3) Authorize
-
-Also make sure Gmail api access is enabled. Security > API permissions
 
 ## Resources
 
@@ -29,9 +73,3 @@ Also make sure Gmail api access is enabled. Security > API permissions
 - [Strapi website](http://strapi.io/)
 - [Strapi community on Slack](http://slack.strapi.io)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
-
-## Installation
-
-```bash
-npm i strapi-provider-email-gmail-2lo
-```
