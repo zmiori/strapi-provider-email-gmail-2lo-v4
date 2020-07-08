@@ -1,14 +1,16 @@
 {
   "name": "strapi-provider-email-gmail-2lo",
   "version": "3.0.0-beta.18.7",
-  "description": "Gmail provider with a service account for the Strapi framework",
+  "description": "Gmail provider with 2-legged OAuth and a service account for the Strapi framework",
   "homepage": "http://strapi.io",
   "keywords": [
     "email",
     "gmail",
     "service account",
     "strapi",
-    "nodemailer"
+    "nodemailer",
+    "G suite",
+    "2-legged OAuth"
   ],
   "directories": {
     "lib": "./lib"
@@ -34,7 +36,7 @@
     "url": "https://github.com/MattieBelt/strapi-provider-email-gmail-2lo/issues"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=12.0.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT",
