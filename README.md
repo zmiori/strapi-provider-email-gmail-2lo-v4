@@ -45,7 +45,7 @@ module.exports = ({ env }) => ({
     providerOptions: {
       username: 'myemail@example.com',
       clientId: env('EMAIL_CLIENT_ID'),
-      privateKey: env('EMAIL_PRIVATE_KEY'),
+      privateKey: env('EMAIL_PRIVATE_KEY').replace(/\\n/g, '\n'),
     },
     settings: {
       defaultFrom: 'myemail@example.com',
@@ -55,6 +55,12 @@ module.exports = ({ env }) => ({
   // ...
 });
 ```
+
+**TIP:** When using environment variables for your privateKey, as in the example above, include all the `\n` in you .env file, like so:
+```..env
+EMAIL_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nAbC...xYz\n-----END PRIVATE KEY-----\n"
+```
+
 
 ### G Suite
 When using G Suite follow these steps authorize the right scopes:
