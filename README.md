@@ -2,7 +2,14 @@
 This package is an email provider for the headless CMS [Strapi](https://github.com/strapi/strapi).
 You can use this provider to send mail programmatically with `strapi-plugin-email`. 
 
-This provider enables you to send email with the [Gmail API](https://developers.google.com/gmail/api) using a 2-legged OAuth configuration, for example when using G Suite.
+This provider enables you to send email with the [Gmail API](https://developers.google.com/gmail/api) using a 2-legged OAuth configuration, when using G Workspace.
+
+Supported versions:
+
+- v3.5.x (recommended)
+- v3.x
+
+_**Not having Google Workspace** (previously G suite) will not work with this provider._
 
 ## Installation
 
@@ -33,6 +40,14 @@ npm install strapi-provider-email-gmail-2lo --save
 | settings.defaultFrom      | string                  | Default sender mail address, exist in domain                                                                                                        | no       | undefined |
 | settings.defaultReplyTo   | string \| array<string> | Default address or addresses the receiver is asked to reply to                                                                      | no       | undefined |
 
+### Enable the scope in G Workspace (required)
+The following steps will authorize the right scope, to allow sending email with G Workspace:
+1) Go to G Workspace admin dashboard > Security > API controls > [Manage domain-wide delegation](https://admin.google.com/ac/owl/domainwidedelegation)
+2) Add an authorized client
+- Client name: `client_id`
+- Scopes: https://mail.google.com/
+3) Authorize
+
 ### Example
 
 **Path -** `config/plugins.js`
@@ -60,15 +75,6 @@ module.exports = ({ env }) => ({
 ```..env
 EMAIL_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nAbC...xYz\n-----END PRIVATE KEY-----\n"
 ```
-
-
-### G Suite
-When using G Suite follow these steps authorize the right scopes:
-1) Go to G Suite admin dashboard > Security > Advanced settings > [Manage domain-wide delegation](https://admin.google.com/ac/owl/domainwidedelegation)
-2) Add an authorized client
-    - Client name: `client_id`
-    - Scopes: https://mail.google.com/ 
-3) Authorize
 
 ## Resources
 
