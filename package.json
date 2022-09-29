@@ -18,7 +18,7 @@
   "main": "./lib",
   "dependencies": {
     "nodemailer": "^6.4.2",
-    "strapi-utils": "^3.0.5"
+    "@strapi/utils": "^4.0.0"
   },
   "strapi": {
     "isProvider": true
