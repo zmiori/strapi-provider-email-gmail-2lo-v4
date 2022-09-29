@@ -1,6 +1,6 @@
 {
   "name": "@zmiori/strapi-provider-email-gmail-2lo-v4",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Gmail provider with 2-legged OAuth and a service account for the Strapi framework",
   "homepage": "http://strapi.io",
   "keywords": [
@@ -13,7 +13,7 @@
     "2-legged OAuth"
   ],
   "directories": {
-    "lib": "lib"
+    "lib": "./lib"
   },
   "main": "./lib",
   "dependencies": {
