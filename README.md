@@ -7,7 +7,7 @@ This provider enables you to send email with the [Gmail API](https://developers.
 Supported versions:
 
 - v3.5.x (recommended)
-- v3.x
+- v4.x
 
 _**Not having Google Workspace** (previously G suite) will not work with this provider._
 

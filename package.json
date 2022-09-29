@@ -1,6 +1,6 @@
 {
-  "name": "strapi-provider-email-gmail-2lo",
-  "version": "3.5.1",
+  "name": "strapi-provider-email-gmail-2lo-v4",
+  "version": "4.0.0",
   "description": "Gmail provider with 2-legged OAuth and a service account for the Strapi framework",
   "homepage": "http://strapi.io",
   "keywords": [
