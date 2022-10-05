@@ -21,17 +21,17 @@ It's required to install this package with a different alias so that it belongs 
 ```bash
 # using yarn
 # npm
-npm i @strapi/provider-email-gmail-2lo-v4@npm:@xmiori/strapi-provider-email-gmail-2lo-v4
+npm i @strapi/provider-email-gmail-2lo-v4@npm:@zmiori/strapi-provider-email-gmail-2lo-v4
 
 # or yarn
-yarn add @strapi/provider-email-gmail-2lo-v4@npm:@xmiori/strapi-provider-email-gmail-2lo-v4
+yarn add @strapi/provider-email-gmail-2lo-v4@npm:@zmiori/strapi-provider-email-gmail-2lo-v4
 ```
 
-The package.json should then contain:
+The `package.json` should then contain:
 
 ```bash
   "dependencies": {
-    "@strapi/provider-email-gmail-api": "npm:@bztes/strapi-provider-email-gmail-api@^4.0.0",
+    "@strapi/provider-email-gmail-2lo-v4": "npm:@zmiori/strapi-provider-email-gmail-2lo-v4@^4.0.0",
   }
 ```
 
