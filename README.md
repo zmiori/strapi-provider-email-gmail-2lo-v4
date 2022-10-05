@@ -1,23 +1,38 @@
-# strapi-provider-email-gmail-2lo
+# strapi-provider-email-gmail-2lo-v4
+[Strapi](https://github.com/strapi/strapi) v4 version of the [strapi-provider-email-gmail-2lo](https://github.com/MattieBelt/strapi-provider-email-gmail-2lo) package.
+
 This package is an email provider for the headless CMS [Strapi](https://github.com/strapi/strapi).
-You can use this provider to send mail programmatically with `strapi-plugin-email`. 
+You can use this provider to send mail programmatically with `@strapi/plugin-email`. 
 
 This provider enables you to send email with the [Gmail API](https://developers.google.com/gmail/api) using a 2-legged OAuth configuration, when using G Workspace.
 
 Supported versions:
 
-- v4.x
+- v4.x.x
 
 _**Not having Google Workspace** (previously G suite) will not work with this provider._
 
 ## Installation
 
+It's required to install this package with a different alias so that it belongs to the @strapi scope.
+
+
+
 ```bash
 # using yarn
-yarn add strapi-provider-email-gmail-2lo
+# npm
+npm i @strapi/provider-email-gmail-2lo-v4@npm:@xmiori/strapi-provider-email-gmail-2lo-v4
 
-# using npm
-npm install strapi-provider-email-gmail-2lo --save
+# or yarn
+yarn add @strapi/provider-email-gmail-2lo-v4@npm:@xmiori/strapi-provider-email-gmail-2lo-v4
+```
+
+The package.json should then contain:
+
+```bash
+  "dependencies": {
+    "@strapi/provider-email-gmail-api": "npm:@bztes/strapi-provider-email-gmail-api@^4.0.0",
+  }
 ```
 
 ## Setup
@@ -55,7 +70,8 @@ The following steps will authorize the right scope, to allow sending email with 
 module.exports = ({ env }) => ({
   // ...
   email: {
-    provider: 'gmail-2lo',
+    config: {
+      provider: 'gmail-2lo-v4',
     providerOptions: {
       username: 'myemail@example.com',
       clientId: env('EMAIL_CLIENT_ID'),
@@ -65,6 +81,7 @@ module.exports = ({ env }) => ({
       defaultFrom: 'myemail@example.com',
       defaultReplyTo: 'myemail@example.com',
     },
+    }
   },
   // ...
 });

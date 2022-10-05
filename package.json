@@ -1,7 +1,7 @@
 {
   "name": "@zmiori/strapi-provider-email-gmail-2lo-v4",
-  "version": "4.0.1",
-  "description": "Gmail provider with 2-legged OAuth and a service account for the Strapi framework",
+  "version": "4.0.2",
+  "description": "Gmail provider with 2-legged OAuth and a service account for the Strapi v4",
   "homepage": "http://strapi.io",
   "keywords": [
     "email",
@@ -23,13 +23,13 @@
   "strapi": {
     "isProvider": true
   },
-  "author": "Mattias Belt, van den <mattiasvandenbelt@gmail.com> (https://github.com/MattieBelt)",
+  "author": "Zoe Baletska, <zoe.baletskat@gmail.com> (https://github.com/zmiori)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/MattieBelt/strapi-provider-email-gmail-2lo.git"
+    "url": "git://github.com/zmiori/strapi-provider-email-gmail-2lo-v4"
   },
   "bugs": {
-    "url": "https://github.com/MattieBelt/strapi-provider-email-gmail-2lo/issues"
+    "url": "https://github.com/xmiori/strapi-provider-email-gmail-2lo-v4/issues"
   },
   "engines": {
     "node": ">=10.0.0",
